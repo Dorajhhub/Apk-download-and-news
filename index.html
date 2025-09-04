@@ -2,79 +2,86 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Jihu's Game Hub</title>
-        <style>
-            body {
-                  font-family: "Arial", sans-serif;
-                        background-color: #f0f8ff;
-                              margin: 0;
-                                    padding: 0;
-                                        }
-                                            nav {
-                                                  background-color: #333;
-                                                        padding: 15px;
-                                                              text-align: center;
-                                                                  }
-                                                                      nav a {
-                                                                            color: white;
-                                                                                  margin: 0 15px;
-                                                                                        text-decoration: none;
-                                                                                              font-weight: bold;
-                                                                                                  }
-                                                                                                      nav a:hover {
-                                                                                                            color: #ffcc00;
-                                                                                                                }
-                                                                                                                    .content {
-                                                                                                                          padding: 50px;
-                                                                                                                                text-align: center;
-                                                                                                                                    }
-                                                                                                                                        .game-card {
-                                                                                                                                              background-color: #fff;
-                                                                                                                                                    border: 1px solid #ddd;
-                                                                                                                                                          border-radius: 10px;
-                                                                                                                                                                padding: 20px;
-                                                                                                                                                                      margin: 20px auto;
-                                                                                                                                                                            max-width: 400px;
-                                                                                                                                                                                  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-                                                                                                                                                                                      }
-                                                                                                                                                                                          .game-card a {
-                                                                                                                                                                                                display: inline-block;
-                                                                                                                                                                                                      margin-top: 10px;
-                                                                                                                                                                                                            padding: 10px 20px;
-                                                                                                                                                                                                                  background-color: #ff6f61;
-                                                                                                                                                                                                                        color: white;
-                                                                                                                                                                                                                              text-decoration: none;
-                                                                                                                                                                                                                                    border-radius: 6px;
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                            .game-card a:hover {
-                                                                                                                                                                                                                                                  background-color: #e85c50;
-                                                                                                                                                                                                                                                      }
-                                                                                                                                                                                                                                                        </style>
-                                                                                                                                                                                                                                                        </head>
-                                                                                                                                                                                                                                                        <body>
-                                                                                                                                                                                                                                                          <nav>
-                                                                                                                                                                                                                                                              <a href="index.html">홈</a>
-                                                                                                                                                                                                                                                                  <a href="games/nyangrestauranttycoon/index.html">냥식당 타이쿤</a>
-                                                                                                                                                                                                                                                                      <!--<a href="games/othergame/index.html">다른 게임</a>
-                                                                                                                                                                                                                                                                          <a href="about.html">소개</a>-->
-                                                                                                                                                                                                                                                                            </nav>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Jihu's Game Hub - 최신 게임과 APK 다운로드, 뉴스와 서버 상태를 확인하세요." />
 
-                                                                                                                                                                                                                                                                              <div class="content">
-                                                                                                                                                                                                                                                                                  <h1>🎮 Jihu's Game Hub</h1>
-                                                                                                                                                                                                                                                                                      <p>재미있는 게임들을 선택해보세요!</p>
+  <!-- Open Graph for SNS -->
+  <meta property="og:title" content="Jihu's Game Hub" />
+  <meta property="og:description" content="최신 게임 APK와 소식을 빠르게 만나보세요." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/preview.png" />
 
-                                                                                                                                                                                                                                                                                          <div class="game-card">
-                                                                                                                                                                                                                                                                                                <h2>🐾 냥식당 타이쿤</h2>
-                                                                                                                                                                                                                                                                                                      <p>고양이들과 함께하는 식당 경영 게임</p>
-                                                                                                                                                                                                                                                                                                            <a href="games/nyangrestauranttycoon/index.html">게임 시작</a>
-                                                                                                                                                                                                                                                                                                                </div>
+  <title>Jihu's Game Hub</title>
 
-                                                                                                                                                                                                                                                                                                                    <div class="game-card">
-                                                                                                                                                                                                                                                                                                                          <h2>🧙‍♂️ 마법사 키우기</h2>
-                                                                                                                                                                                                                                                                                                                                <p>마법 세계에서 성장하는 RPG</p>
-                                                                                                                                                                                                                                                                                                                                      <a href="games/wizardgrow/index.html">게임 시작</a>
-                                                                                                                                                                                                                                                                                                                                          </div>
-                                                                                                                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                                                                                                                            </body>
-                                                                                                                                                                                                                                                                                                                                            </html>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #333;
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover, nav a:focus {
+      text-decoration: underline;
+    }
+    main {
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav aria-label="메인 메뉴">
+      <a href="index.html" aria-current="page">홈</a>
+      <a href="ping.html">서버 상태</a>
+      <a href="games/nyangrestauranttycoon/index.html">냥이 레스토랑 타이쿤</a>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="welcome-title">
+      <h1 id="welcome-title">Jihu's Game Hub에 오신 것을 환영합니다 🎮</h1>
+      <p>최신 APK와 게임 소식을 확인하고 직접 플레이해 보세요!</p>
+    </section>
+
+    <section aria-labelledby="news-title">
+      <h2 id="news-title">최신 뉴스</h2>
+      <article>
+        <h3>신규 업데이트 소식</h3>
+        <p>새로운 버전의 게임이 추가되었습니다. 지금 확인해 보세요!</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="download-title">
+      <h2 id="download-title">APK 다운로드</h2>
+      <ul>
+        <li><a href="apk/sample.apk" download>샘플 APK 다운로드</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jihu's Game Hub. 모든 권리 보유.</p>
+  </footer>
+</body>
+</html>
