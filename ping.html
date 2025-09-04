@@ -1,1 +1,92 @@
-pong
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="서버 상태 확인 - Jihu's Game Hub" />
+  <title>서버 상태 확인</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #333;
+      padding: 15px;
+    }
+    header a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      margin: 50px auto;
+      max-width: 600px;
+    }
+    #status {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+    .ok {
+      color: green;
+      font-weight: bold;
+    }
+    .fail {
+      color: red;
+      font-weight: bold;
+    }
+    footer {
+      background: #333;
+      color: white;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav aria-label="메인 메뉴">
+      <a href="index.html">홈</a>
+      <a href="ping.html" aria-current="page">서버 상태</a>
+      <a href="games/nyangrestauranttycoon/index.html">게임</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>서버 상태 확인</h1>
+    <p>아래 버튼을 눌러 서버 응답을 확인하세요.</p>
+    <button onclick="checkServer()">서버 상태 확인</button>
+    <div id="status">⏳ 대기 중...</div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jihu's Game Hub</p>
+  </footer>
+
+  <script>
+    async function checkServer() {
+      const statusEl = document.getElementById("status");
+      const startTime = Date.now();
+
+      try {
+        // 실제 서버 주소로 변경 가능 (예: "/api/ping")
+        const response = await fetch("index.html", { cache: "no-store" });
+        const endTime = Date.now();
+        const elapsed = endTime - startTime;
+
+        if (response.ok) {
+          statusEl.innerHTML = `✅ <span class="ok">서버 정상 작동 (${elapsed}ms)</span>`;
+        } else {
+          statusEl.innerHTML = `❌ <span class="fail">서버 응답 오류 (코드: ${response.status})</span>`;
+        }
+      } catch (error) {
+        statusEl.innerHTML = `❌ <span class="fail">서버 연결 실패</span>`;
+      }
+    }
+  </script>
+</body>
+</html>
