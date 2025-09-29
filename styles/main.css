@@ -1,44 +1,104 @@
 /* ========================================
-   CSS 보완 추가
+   공통 스타일
 ======================================== */
-
-/* 강조색을 위한 변수 (선택 사항) */
-:root {
-    --accent-color: #ff6f61; /* 게임 허브의 강조색으로 설정 */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* 냥냥 레스토랑 페이지의 APK 다운로드 링크 스타일 (index.html에도 적용 가능) */
-.download-button {
-    /* 기존 button 스타일을 재활용하거나 유사하게 정의 */
-    display: inline-block; /* a 태그를 블록처럼 만들어 패딩 적용 */
-    background-color: var(--accent-color, #ff6f61); 
-    color: white;
-    border: none;
-    padding: 15px 30px; /* 더 눈에 띄게 큰 패딩 */
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    margin: 20px 0; /* 상하 여백 추가 */
-    text-decoration: none; /* a 태그의 밑줄 제거 */
-}
-
-.download-button:hover,
-.download-button:focus {
-    background-color: #e85c50; /* 호버 색상 */
+a {
+    color: #0066cc;
     text-decoration: none;
 }
 
-/* 전체적인 제목 강조색 변경 (선택 사항) */
-h1, h2, h3 {
-    margin-top: 0;
-    color: var(--accent-color, #ff6f61); /* 제목에 강조색 적용 */
+a:hover,
+a:focus {
+    text-decoration: underline;
 }
 
-/* 네비게이션 활성화 페이지 강조 */
-nav a[aria-current="page"] {
-    background-color: var(--accent-color, #ff6f61);
-    padding: 5px 10px;
+/* ========================================
+   헤더 & 네비게이션
+======================================== */
+header {
+    background-color: #333;
+}
+
+nav {
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+/* ========================================
+   메인 컨텐츠
+======================================== */
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+/* ========================================
+   버튼 스타일
+======================================== */
+button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover,
+button:focus {
+    background-color: #004999;
+}
+
+/* ========================================
+   서버 상태 표시
+======================================== */
+#status {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.ok {
+    color: green;
+    font-weight: bold;
+}
+
+.fail {
+    color: red;
+    font-weight: bold;
+}
+
+/* ========================================
+   푸터
+======================================== */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
 }

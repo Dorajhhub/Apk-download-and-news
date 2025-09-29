@@ -1,0 +1,44 @@
+/* ========================================
+   CSS 보완 추가
+======================================== */
+
+/* 강조색을 위한 변수 (선택 사항) */
+:root {
+    --accent-color: #ff6f61; /* 게임 허브의 강조색으로 설정 */
+}
+
+/* 냥냥 레스토랑 페이지의 APK 다운로드 링크 스타일 (index.html에도 적용 가능) */
+.download-button {
+    /* 기존 button 스타일을 재활용하거나 유사하게 정의 */
+    display: inline-block; /* a 태그를 블록처럼 만들어 패딩 적용 */
+    background-color: var(--accent-color, #ff6f61); 
+    color: white;
+    border: none;
+    padding: 15px 30px; /* 더 눈에 띄게 큰 패딩 */
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin: 20px 0; /* 상하 여백 추가 */
+    text-decoration: none; /* a 태그의 밑줄 제거 */
+}
+
+.download-button:hover,
+.download-button:focus {
+    background-color: #e85c50; /* 호버 색상 */
+    text-decoration: none;
+}
+
+/* 전체적인 제목 강조색 변경 (선택 사항) */
+h1, h2, h3 {
+    margin-top: 0;
+    color: var(--accent-color, #ff6f61); /* 제목에 강조색 적용 */
+}
+
+/* 네비게이션 활성화 페이지 강조 */
+nav a[aria-current="page"] {
+    background-color: var(--accent-color, #ff6f61);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
