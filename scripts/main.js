@@ -47,7 +47,7 @@ async function loadNyangNews() {
         newsData.forEach(item => {
             const link = document.createElement('a');
             // 클릭 시 상세 페이지로 이동하도록 경로 설정
-            link.href = `./news/id=${item.id}`; 
+            link.href = `./news/index.html?id=${item.id}`; 
             link.className = 'news-link-block'; 
 
             let contentHtml = '';
