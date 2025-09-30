@@ -1,8 +1,7 @@
 /* ========================================
-   서버 상태 체크 기능 (기존 코드)
+   서버 상태 체크 기능 (기존 코드 유지)
 ======================================== */
 async function checkServer(endpoint = "index.html") {
-    // ... (기존 checkServer 함수 내용 유지)
     const statusEl = document.getElementById("status");
     if (!statusEl) return;
 
@@ -25,13 +24,12 @@ async function checkServer(endpoint = "index.html") {
 
 
 /* ========================================
-   NEW: 냥냥 레스토랑 뉴스 로딩 함수
+   냥냥 레스토랑 뉴스 로딩 함수 (수정됨)
 ======================================== */
 async function loadNyangNews() {
     const newsContainer = document.getElementById('news-container');
     if (!newsContainer) return;
 
-    // JSON 파일 경로: 현재 HTML 파일(/games/nyangrestauranttycoon/index.html) 기준 상대 경로
     const jsonPath = 'news.json'; 
 
     try {
@@ -48,25 +46,31 @@ async function loadNyangNews() {
 
         // 각 뉴스 항목을 HTML로 변환하여 컨테이너에 삽입
         newsData.forEach(item => {
-            const article = document.createElement('article');
-            article.className = 'news-article'; // CSS 스타일링을 위한 클래스
-            
+            // FIX: 전체 아티클을 감싸는 <a> 링크 태그 생성
+            const link = document.createElement('a');
+            // 요청하신 경로 형식으로 href 설정 (현재 경로 기준 상대 경로)
+            link.href = `./news/id=${item.id}`; 
+            // CSS 스타일링을 위해 클래스 추가
+            link.className = 'news-link-block'; 
+
             let contentHtml = '';
             
-            // content가 배열인지 문자열인지 확인하여 렌더링
             if (Array.isArray(item.content)) {
                 contentHtml = '<ul>' + item.content.map(li => `<li>${li}</li>`).join('') + '</ul>';
             } else {
                 contentHtml = `<p>${item.content}</p>`;
             }
 
-            article.innerHTML = `
-                ${item.image ? `<img src="${item.image}" alt="${item.title}" class="news-image">` : ''}
-                <h3>${item.title}</h3>
-                <p class="news-date">${item.date}</p>
-                ${contentHtml}
+            // 아티클 내용을 링크 내부에 삽입
+            link.innerHTML = `
+                <article class="news-article">
+                    ${item.image ? `<img src="${item.image}" alt="${item.title}" class="news-image">` : ''}
+                    <h3>${item.title}</h3>
+                    <p class="news-date">${item.date}</p>
+                    ${contentHtml}
+                </article>
             `;
-            newsContainer.appendChild(article);
+            newsContainer.appendChild(link);
         });
 
     } catch (error) {
@@ -77,17 +81,16 @@ async function loadNyangNews() {
 
 
 /* ========================================
-   DOMContentLoaded 이벤트 공통 초기화 (기존 코드 수정)
+   DOMContentLoaded 이벤트 공통 초기화 (기존 코드 유지)
 ======================================== */
 document.addEventListener("DOMContentLoaded", () => {
-    // ping.html에서 버튼 연결 (기존 코드)
+    // ping.html에서 버튼 연결
     const pingBtn = document.querySelector("button[onclick='checkServer()']");
     if (pingBtn) {
-        // 기존 HTML의 onclick 대신 이벤트 리스너 사용 (더 권장되는 방식)
         pingBtn.addEventListener("click", () => checkServer()); 
     }
     
-    // NEW: '냥냥 레스토랑 타이쿤' 페이지에서 뉴스 로딩 함수 호출
+    // '냥냥 레스토랑 타이쿤' 페이지에서 뉴스 로딩 함수 호출
     const newsContainer = document.getElementById('news-container');
     if (newsContainer) {
         loadNyangNews();
@@ -95,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ========================================
-   기타 유틸 함수 예시 (기존 코드)
+   기타 유틸 함수 예시 (기존 코드 유지)
 ======================================== */
 function scrollToSection(id) {
     const el = document.getElementById(id);
