@@ -125,7 +125,7 @@ async function loadNewsDetail() {
                 ${item.image ? `<img src="../${item.image}" alt="${item.title}" class="news-detail-image">` : ''}
                 <div class="news-detail-content">${contentHtml}</div>
                 <hr style="margin: 30px 0;">
-                <a href="../index.html" class="download-button" style="margin-top: 10px;">← 목록으로 돌아가기</a>
+                <a href="../games/nyangrestauranttycoon/index.html" class="download-button" style="margin-top: 10px;">← 목록으로 돌아가기</a>
             </article>
         `;
 
