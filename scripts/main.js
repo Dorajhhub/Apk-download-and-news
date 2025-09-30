@@ -24,7 +24,7 @@ async function checkServer(endpoint = "index.html") {
 
 
 /* ========================================
-   뉴스 목록 로딩 함수
+   뉴스 목록 로딩 함수 (수정됨)
 ======================================== */
 async function loadNyangNews() {
     const newsContainer = document.getElementById('news-container');
@@ -46,7 +46,7 @@ async function loadNyangNews() {
         // 각 뉴스 항목을 HTML로 변환하여 컨테이너에 삽입
         newsData.forEach(item => {
             const link = document.createElement('a');
-            // 클릭 시 상세 페이지로 이동하도록 경로 설정
+            // FIX: 링크 형식을 'index.html?id=X'로 변경하여 404 에러를 방지함
             link.href = `./news/index.html?id=${item.id}`; 
             link.className = 'news-link-block'; 
 
@@ -76,23 +76,22 @@ async function loadNyangNews() {
 
 
 /* ========================================
-   뉴스 상세 정보를 불러오는 함수
+   뉴스 상세 정보를 불러오는 함수 (수정됨)
 ======================================== */
 async function loadNewsDetail() {
     const detailContainer = document.getElementById('news-detail-container');
     if (!detailContainer) return;
 
-    // 1. URL에서 ID 값 추출 (예: .../news/id=1 에서 '1'을 추출)
-    const url = window.location.pathname;
-    const match = url.match(/id=(\d+)/); 
+    // 1. URL 파라미터에서 ID 값 추출 (?id=X)
+    const params = new URLSearchParams(window.location.search);
+    const newsId = parseInt(params.get('id'));
 
-    if (!match || !match[1]) {
+    if (isNaN(newsId)) {
         detailContainer.innerHTML = '<h1>오류: 뉴스 ID를 찾을 수 없습니다.</h1>';
         return;
     }
-    const newsId = parseInt(match[1]);
 
-    // 2. JSON 데이터 로드 (경로 주의: /news/index.html 에서 ../news.json으로 가야 함)
+    // 2. JSON 데이터 로드 (경로: /news/index.html 에서 ../news.json으로 가야 함)
     const jsonPath = '../news.json'; 
 
     try {
