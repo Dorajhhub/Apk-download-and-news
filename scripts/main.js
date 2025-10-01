@@ -31,7 +31,7 @@ async function loadNyangNews() {
     if (!newsContainer) return;
 
     // 경로: 현재 HTML 파일(/games/nyangrestauranttycoon/index.html) 기준 상대 경로
-    const jsonPath = '../games/nyangrestauranttycoon/news.json'; 
+    const jsonPath = 'news.json'; 
 
     try {
         const response = await fetch(jsonPath);
