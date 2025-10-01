@@ -92,7 +92,7 @@ async function loadNewsDetail() {
     }
 
     // 2. JSON 데이터 로드 (경로: /news/index.html 에서 ../news.json으로 가야 함)
-    const jsonPath = '../games/nyangrestauranttycoon/news.json'; 
+    const jsonPath = '../news.json'; 
 
     try {
         const response = await fetch(jsonPath);
