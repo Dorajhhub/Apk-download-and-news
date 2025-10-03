@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Memorize Vocab - 스마트 단어 암기 앱</title>
+    
+    <link rel="stylesheet" href="/styles/main.css" /> 
+    <style>
+        /* 이 페이지 전용 스타일 */
+        .vocab-highlight {
+            color: #4CAF50; /* 녹색 계열 강조 */
+            font-weight: bold;
+        }
+        .preview-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #4CAF50;
+            margin-right: 15px;
+            min-width: 40px; /* 아이콘 너비 고정 */
+        }
+        .review-card {
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            background-color: #fafafa;
+        }
+        .review-rating {
+            color: gold;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav aria-label="메인 메뉴">
+            <a href="/index.html">홈</a>
+            <a href="/ping.html">서버 상태</a>
+            <a href="/games/nyangrestauranttycoon/index.html">냥냥 레스토랑 타이쿤</a>
+            <a href="/games/space-cat-adventures/index.html">우주 고양이 대모험</a>
+            <a href="/games/memorize-vocab/index.html" aria-current="page">Memorize Vocab (단어 암기)</a>
+            <a href="/games/making-songs/index.html">Making Songs (작곡)</a>
+        </nav>
+    </header>
+
+    <main> 
+        <section aria-labelledby="vocab-title" style="text-align: center;">
+            <h1 id="vocab-title" style="font-size: 2.5rem;">🧠 Memorize Vocab: 스마트 단어 암기</h1>
+            <p style="font-size: 1.1rem; color: #555;">
+                <span class="vocab-highlight">망각 곡선</span>을 역이용하여 단어를 **완벽하게 기억**하게 돕습니다.
+            </p>
+            <div style="margin: 30px 0;">
+                <img src="images/vocab_main_screen.png" alt="앱 메인 화면 스크린샷" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);">
+            </div>
+            <a href="#" class="download-button" style="background-color: #4CAF50;">앱 다운로드</a>
+            <p style="font-style: italic; color: gray; margin-top: 10px;">
+                Android 및 iOS 지원
+            </p>
+        </section>
+
+        <section class="preview-card">
+            <h2>📈 과학적인 암기 트래커</h2>
+            <div class="feature-item">
+                <span class="feature-icon">⏱️</span>
+                <div>
+                    <h3>최적의 복습 타이밍</h3>
+                    <p>사용자가 단어를 잊어버리기 **직전**을 계산하여 알림을 보냅니다. 효율성이 극대화됩니다.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">📊</span>
+                <div>
+                    <h3>학습 진도 시각화</h3>
+                    <p>월별/주별 학습량, 암기 완료 단어 수 등을 그래프로 확인하며 동기 부여를 얻으세요.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">📚</span>
+                <div>
+                    <h3>나만의 맞춤 단어장</h3>
+                    <p>필요한 단어를 직접 입력하거나, 수천 개의 사전 제작된 단어장에서 선택하여 학습할 수 있습니다.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Jihu's Game Hub. 모든 권리 보유.</p>
+    </footer>
+    <script src="/scripts/main.js"></script>
+</body>
+</html>
