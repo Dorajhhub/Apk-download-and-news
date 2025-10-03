@@ -1,5 +1,5 @@
 /* ========================================
-   서버 상태 체크 기능
+   서버 상태 체크 기능 
 ======================================== */
 async function checkServer(endpoint = "index.html") {
     const statusEl = document.getElementById("status");
