@@ -1,49 +1,120 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Jihu's Game Hub - 최신 게임과 APK 다운로드, 뉴스와 서버 상태를 확인하세요." />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jihu's Game Hub - 메인</title>
+    
+    <link rel="stylesheet" href="styles/main.css" />
+    <style>
+        /* index.html 전용 스타일 */
+        .app-grid {
+            display: grid;
+            /* 3열 레이아웃, 작은 화면에서는 1열 */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .app-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none; /* 링크 스타일 제거 */
+            display: block; /* 전체 카드가 링크되도록 */
+        }
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .app-card h3 {
+            margin-top: 10px;
+            font-size: 1.5rem;
+            color: #333; /* 기본 색상 */
+        }
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
 
-  <!-- Open Graph for SNS -->
-  <meta property="og:title" content="Jihu's Game Hub" />
-  <meta property="og:description" content="최신 게임 APK와 소식을 빠르게 만나보세요." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/preview.png" />
-
-  <title>Jihu's Game Hub</title>
-
-  <!-- 기존 인라인 스타일 제거 후 추가 -->
-  <link rel="stylesheet" href="styles/main.css" />
+        /* 각 앱별 강조 색상 */
+        .nyang-color { color: #ff6f61; }
+        .space-color { color: #02569B; }
+        .vocab-color { color: #4CAF50; }
+        .song-color { color: #FF5722; }
+    </style>
 </head>
 <body>
-  <header>
-    <nav aria-label="메인 메뉴">
-      <a href="index.html" aria-current="page">홈</a>
-      <a href="ping.html">서버 상태</a>
-      <a href="games/nyangrestauranttycoon/index.html">냥냥 레스토랑 타이쿤</a>
-    </nav>
-  </header>
+    <header>
+        <nav aria-label="메인 메뉴">
+            <a href="/index.html" aria-current="page">홈</a>
+            <a href="/ping.html">서버 상태</a>
+            <a href="/games/nyangrestauranttycoon/index.html">냥냥 레스토랑 타이쿤</a>
+            <a href="/games/space-cat-adventures/index.html">우주 고양이 대모험</a>
+            <a href="/games/memorize-vocab/index.html">Memorize Vocab (단어 암기)</a>
+            <a href="/games/making-songs/index.html">Making Songs (작곡)</a>
+        </nav>
+    </header>
 
-  <main>
-    <section aria-labelledby="welcome-title">
-      <h1 id="welcome-title">Jihu's Game Hub에 오신 것을 환영합니다 🎮</h1>
-      <p>최신 APK와 게임 소식을 확인하고 직접 플레이해 보세요!</p>
-    </section>
+    <main>
+        <section style="text-align: center; margin-bottom: 50px;">
+            <h1>🎉 Jihu's Project Hub에 오신 것을 환영합니다!</h1>
+            <p style="font-size: 1.1rem; color: #555;">
+                현재 개발 중이거나 서비스 중인 다양한 프로젝트들을 만나보세요.
+            </p>
+        </section>
 
-    <section aria-labelledby="news-title">
-      <h2 id="news-title">최신 뉴스</h2>
-      <article>
-        <h3>신규 업데이트 소식</h3>
-        <p>새로운 버전의 게임이 추가되었습니다. 지금 확인해 보세요!</p>
-      </article>
-    </section>
-  </main>
+        <section aria-labelledby="app-list-title">
+            <h2 id="app-list-title" style="text-align: center; margin-bottom: 30px;">🏠 우리의 프로젝트</h2>
+            
+            <div class="app-grid">
+                
+                <a href="/games/nyangrestauranttycoon/index.html" class="app-card">
+                    <span class="card-icon nyang-color">🐾</span>
+                    <h3>냥냥 레스토랑 타이쿤</h3>
+                    <p style="font-size: 0.9em; color: gray;">고양이와 함께하는 식당 경영 APK 다운로드.</p>
+                </a>
 
-  <footer>
-    <p>&copy; 2025 Jihu's Game Hub. 모든 권리 보유.</p>
-  </footer>
+
+                <a href="/games/memorize-vocab/index.html" class="app-card">
+                    <span class="card-icon vocab-color">🧠</span>
+                    <h3>Memorize Vocab</h3>
+                    <p style="font-size: 0.9em; color: gray;">단어 암기 앱.</p>
+                    <span style="font-size: 0.8em; color: #4CAF50; font-weight: bold;">[BETA]</span>
+                </a>
+
+                <a href="/games/making-songs/index.html" class="app-card">
+                    <span class="card-icon song-color">🎶</span>
+                    <h3>Making Songs</h3>
+                    <p style="font-size: 0.9em; color: gray;">모바일 작곡 툴.</p>
+                    <span style="font-size: 0.8em; color: #FF5722; font-weight: bold;">[PREVIEW]</span>
+                </a>
+
+                <div class="app-card" style="opacity: 0.6;">
+                    <span class="card-icon" style="color: #ccc;">💡</span>
+                    <h3>새 프로젝트 구상 중</h3>
+                    <p style="font-size: 0.9em; color: gray;">다음에 나올 새로운 앱을 기대해주세요!</p>
+                </div>
+            </div>
+        </section>
+        
+        <hr style="border-top: 1px solid #ddd; width: 80%; margin: 60px auto 40px auto;">
+
+        <section aria-labelledby="status-overview" style="text-align: center;">
+            <h2 id="status-overview">서버 상태 개요</h2>
+            <p>메인 서버 상태를 확인하려면 아래 버튼을 클릭하거나, 상단 메뉴의 '서버 상태'를 방문하세요.</p>
+            <button onclick="window.location.href='/ping.html'" style="margin-top: 20px;">
+                서버 상태 확인 페이지로 이동
+            </button>
+        </section>
+
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Jihu's Game Hub. 모든 권리 보유.</p>
+    </footer>
+    <script src="/scripts/main.js"></script>
 </body>
-<!-- 기존 인라인 스크립트 제거 후 추가 -->
-<script src="scripts/main.js"></script>
 </html>
