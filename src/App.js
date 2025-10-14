@@ -1,7 +1,9 @@
 
 function App() {
   return (
-    <div>App</div>
+    <div>
+      <p>서버 점검 중!!</p>
+    </div>
   );
 }
 
