@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-// 서버의 핑을 확인할 대상 URL입니다.
-// ⚠️ 이 URL을 실제 서버의 상태 확인 엔드포인트(예: /api/ping)로 변경해야 합니다.
-const TARGET_URL = 'https://dorajhhub.github.io/Apk-download-and-news/#/ping'; 
+const TARGET_URL = 'https://dorajhhub.github.io/Apk-download-and-news/'; 
 
 const PingChecker = () => {
-  const [latency, setLatency] = useState(null); // 지연 시간 (ms)
-  const [status, setStatus] = useState('ready'); // 상태: ready, checking, success, error
+  const [latency, setLatency] = useState(null); 
+  const [status, setStatus] = useState('ready'); 
 
   const checkServerStatus = async () => {
     setStatus('checking');
@@ -16,8 +14,7 @@ const PingChecker = () => {
     const startTime = Date.now();
     
     try {
-      // ⚠️ 실제 서버 엔드포인트로 GET 요청을 보냅니다.
-      await axios.get(TARGET_URL); 
+      await axios.get(`${TARGET_URL}?_=${new Date().getTime()}`); 
 
       const endTime = Date.now();
       const measuredLatency = endTime - startTime;
@@ -26,14 +23,12 @@ const PingChecker = () => {
       setStatus('success');
       
     } catch (error) {
-      // 요청 실패 (4xx, 5xx 에러 또는 네트워크 오류)
       setLatency(null);
       setStatus('error');
       console.error("Server check failed:", error);
     }
   };
   
-  // 상태에 따른 메시지 및 스타일 정의
   let statusText, statusColor;
   if (status === 'checking') {
     statusText = '서버 상태 확인 중...';
@@ -69,7 +64,6 @@ const PingChecker = () => {
         {status === 'checking' ? '확인 중...' : '서버 상태 확인하기'}
       </button>
 
-      {/* 성공 시 로딩 시간 표시 */}
       {status === 'success' && (
         <div className="mt-4 text-sm text-gray-500">
           측정 시간은 네트워크 환경에 따라 달라질 수 있습니다.
