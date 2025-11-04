@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Apk-download-and-news/static/css/main.10549bbc.css",
-    "main.js": "/Apk-download-and-news/static/js/main.dd4fd77c.js",
+    "main.css": "/Apk-download-and-news/static/css/main.3b7828a1.css",
+    "main.js": "/Apk-download-and-news/static/js/main.f66e0296.js",
     "index.html": "/Apk-download-and-news/index.html",
-    "main.10549bbc.css.map": "/Apk-download-and-news/static/css/main.10549bbc.css.map",
-    "main.dd4fd77c.js.map": "/Apk-download-and-news/static/js/main.dd4fd77c.js.map"
+    "main.3b7828a1.css.map": "/Apk-download-and-news/static/css/main.3b7828a1.css.map",
+    "main.f66e0296.js.map": "/Apk-download-and-news/static/js/main.f66e0296.js.map"
   },
   "entrypoints": [
-    "static/css/main.10549bbc.css",
-    "static/js/main.dd4fd77c.js"
+    "static/css/main.3b7828a1.css",
+    "static/js/main.f66e0296.js"
   ]
 }
