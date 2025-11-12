@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Apk-download-and-news/static/css/main.3b7828a1.css",
+    "main.js": "/Apk-download-and-news/static/js/main.66404e32.js",
+    "index.html": "/Apk-download-and-news/index.html",
+    "main.3b7828a1.css.map": "/Apk-download-and-news/static/css/main.3b7828a1.css.map",
+    "main.66404e32.js.map": "/Apk-download-and-news/static/js/main.66404e32.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b7828a1.css",
+    "static/js/main.66404e32.js"
+  ]
+}
