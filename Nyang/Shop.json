@@ -1,0 +1,42 @@
+[
+  {
+    "id": "Beginner Package_001",
+    "title": "초보자 패키지1",
+    "description": "무료 토마토 5개와 당근 5개",
+    "startdate": "2025-11-02",
+    "finishdate": "2026-11-02",
+    "price": {
+        "Coin": 100,
+        "Reputation": 0,
+        "Crystal": 0
+    },
+    "give": {
+        "RefrigeratorInventory": {
+            "itemid": "0",
+            "quantity": 5
+        },
+        "RefrigeratorInventory": {
+            "itemid": "8",
+            "quantity": 5
+        }
+    }
+  },
+  {
+    "id": "Update Freebie!",
+    "title": "무료보상!",
+    "description": "free megabox!",
+    "startdate": "2026-1-10",
+    "finishdate": "2026-1-20",
+    "price": {
+        "Coin": 0,
+        "Reputation": 0,
+        "Crystal": 0
+    },
+    "give": {
+        "MegaBox": {
+            "itemid": "megabox_001",
+            "quantity": 1
+        }
+    }    
+  }
+]
