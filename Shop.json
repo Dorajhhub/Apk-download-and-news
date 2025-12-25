@@ -6,37 +6,87 @@
     "startdate": "2025-11-02",
     "finishdate": "2026-11-02",
     "price": {
-        "Coin": 100,
-        "Reputation": 0,
-        "Crystal": 0
+      "Coin": 100,
+      "Reputation": 0,
+      "Crystal": 0
     },
     "give": {
-        "RefrigeratorInventory": {
-            "itemid": "0",
-            "quantity": 5
-        },
-        "RefrigeratorInventory": {
-            "itemid": "8",
-            "quantity": 5
-        }
+      "RefrigeratorInventory": {
+        "itemid": "0",
+        "quantity": 5
+      },
+      "RefrigeratorInventory": {
+        "itemid": "8",
+        "quantity": 5
+      }
     }
   },
   {
     "id": "Update Freebie!",
     "title": "무료보상!",
     "description": "free megabox!",
-    "startdate": "2026-1-10",
-    "finishdate": "2026-1-20",
+    "startdate": "2026-2-10",
+    "finishdate": "2026-2-20",
     "price": {
-        "Coin": 0,
-        "Reputation": 0,
-        "Crystal": 0
+      "Coin": 0,
+      "Reputation": 0,
+      "Crystal": 0
     },
     "give": {
-        "MegaBox": {
-            "itemid": "megabox_001",
-            "quantity": 1
-        }
-    }    
+      "MegaBox": {
+        "quantity": 5
+      }
+    }
+  },
+  {
+    "id": "Update Freebie!!",
+    "title": "무료보상!",
+    "description": "Free coin!",
+    "startdate": "2026-2-10",
+    "finishdate": "2026-2-20",
+    "price": {
+      "Coin": 0,
+      "Reputation": 0,
+      "Crystal": 0
+    },
+    "give": {
+      "Coin": {
+        "quantity": 1000
+      }
+    }
+  },
+  {
+    "id": "Update Freebie!!!",
+    "title": "무료보상!",
+    "description": "Free Crystal!",
+    "startdate": "2026-2-10",
+    "finishdate": "2026-2-20",
+    "price": {
+      "Coin": 0,
+      "Reputation": 0,
+      "Crystal": 0
+    },
+    "give": {
+      "Crystal": {
+        "quantity": 5
+      }
+    }
+  },
+  {
+    "id": "Update Freebie!!!!",
+    "title": "무료보상!",
+    "description": "Free Affection!",
+    "startdate": "2026-2-10",
+    "finishdate": "2026-2-20",
+    "price": {
+      "Coin": 0,
+      "Reputation": 0,
+      "Crystal": 0
+    },
+    "give": {
+      "Affection": {
+        "quantity": 0.03
+      }
+    }
   }
 ]
