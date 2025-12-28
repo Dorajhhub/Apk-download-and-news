@@ -12,18 +12,22 @@
         "Crystal": 0
       },
       "give": {
-        "RefrigeratorInventory": [
-          { "itemid": 0, "quantity": 5 },
-          { "itemid": 8, "quantity": 5 }
-        ]
+        "RefrigeratorInventory": {
+          "0": {
+            "quantity": 5
+          },
+          "8": {
+            "quantity": 5
+          }
+        }
       }
     },
     {
       "id": "Update Freebie!",
       "title": "무료보상!",
       "description": "free megabox!",
-      "startdate": "2026-02-10",
-      "finishdate": "2026-02-20",
+      "startdate": "2026-2-10",
+      "finishdate": "2026-2-20",
       "price": {
         "Coin": 0,
         "Reputation": 0,
@@ -31,84 +35,16 @@
       },
       "give": {
         "MegaBox": {
-          "quantity": 1
+          "quantity": 5
         }
       }
     },
     {
       "id": "Update Freebie!!",
       "title": "무료보상!",
-      "description": "free megabox!",
-      "startdate": "2026-02-10",
-      "finishdate": "2026-02-20",
-      "price": {
-        "Coin": 0,
-        "Reputation": 0,
-        "Crystal": 0
-      },
-      "give": {
-        "MegaBox": {
-          "quantity": 1
-        }
-      }
-    },
-    {
-      "id": "Update Freebie!!!",
-      "title": "무료보상!",
-      "description": "free megabox!",
-      "startdate": "2026-02-10",
-      "finishdate": "2026-02-20",
-      "price": {
-        "Coin": 0,
-        "Reputation": 0,
-        "Crystal": 0
-      },
-      "give": {
-        "MegaBox": {
-          "quantity": 1
-        }
-      }
-    },
-    {
-      "id": "Update Freebie!!!!",
-      "title": "무료보상!",
-      "description": "free megabox!",
-      "startdate": "2026-02-10",
-      "finishdate": "2026-02-20",
-      "price": {
-        "Coin": 0,
-        "Reputation": 0,
-        "Crystal": 0
-      },
-      "give": {
-        "MegaBox": {
-          "quantity": 1
-        }
-      }
-    },
-    {
-      "id": "Update Freebie!!!!!",
-      "title": "무료보상!",
-      "description": "free megabox!",
-      "startdate": "2026-02-10",
-      "finishdate": "2026-02-20",
-      "price": {
-        "Coin": 0,
-        "Reputation": 0,
-        "Crystal": 0
-      },
-      "give": {
-        "MegaBox": {
-          "quantity": 1
-        }
-      }
-    },
-    {
-      "id": "Update Freebie!!!!!!",
-      "title": "무료보상!",
       "description": "Free coin!",
-      "startdate": "2026-02-10",
-      "finishdate": "2026-02-20",
+      "startdate": "2026-2-10",
+      "finishdate": "2026-2-20",
       "price": {
         "Coin": 0,
         "Reputation": 0,
@@ -121,11 +57,11 @@
       }
     },
     {
-      "id": "Update Freebie!!!!!!!",
+      "id": "Update Freebie!!!",
       "title": "무료보상!",
       "description": "Free Crystal!",
-      "startdate": "2026-02-10",
-      "finishdate": "2026-02-20",
+      "startdate": "2026-2-10",
+      "finishdate": "2026-2-20",
       "price": {
         "Coin": 0,
         "Reputation": 0,
@@ -138,11 +74,11 @@
       }
     },
     {
-      "id": "Update Freebie!!!!!!!!",
+      "id": "Update Freebie!!!!",
       "title": "무료보상!",
       "description": "Free Affection!",
-      "startdate": "2026-02-10",
-      "finishdate": "2026-02-20",
+      "startdate": "2026-2-10",
+      "finishdate": "2026-2-20",
       "price": {
         "Coin": 0,
         "Reputation": 0,
@@ -156,5 +92,3 @@
     }
   ]
 }
-
-
