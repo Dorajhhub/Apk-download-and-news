@@ -1,93 +1,239 @@
 {
   "shopList": [
     {
-      "id": "Beginner Package_001",
+      "id": "Beginner_Package_001",
       "title": "초보자 패키지1",
-      "description": "무료 토마토 5개와 당근 5개",
-      "startdate": "2025-11-02",
-      "finishdate": "2026-11-02",
-      "price": {
-        "Coin": 100,
-        "Reputation": 0,
-        "Crystal": 0
-      },
-      "give": {
-        "RefrigeratorInventory": {
-          "0": {
-            "quantity": 5
-          },
-          "8": {
-            "quantity": 5
-          }
-        }
+      "desc": "토마토 5개와 당근 5개",
+      "start": "2025-11-02",
+      "end": "2026-11-02",
+      "cost": { "Coin": 100, "Reputation": 0, "Crystal": 0 },
+      "reward": {
+        "fridge": [
+          { "item": 0, "qty": 5 },
+          { "item": 8, "qty": 5 }
+        ]
       }
     },
     {
-      "id": "Update Freebie!",
-      "title": "무료보상!",
-      "description": "free megabox!",
-      "startdate": "2026-2-10",
-      "finishdate": "2026-2-20",
-      "price": {
-        "Coin": 0,
-        "Reputation": 0,
-        "Crystal": 0
-      },
-      "give": {
-        "MegaBox": {
-          "quantity": 5
-        }
+      "id": "DeveloperBirthday10",
+      "title": "D-10",
+      "desc": "D-10",
+      "start": "2026-05-04",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": 0 },
+      "reward": { "MegaBox": { "qty": 1 } }
+    },
+    {
+      "id": "DeveloperBirthday10Crystal",
+      "title": "D-10",
+      "desc": "D-10",
+      "start": "2026-05-04",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": 29 },
+      "reward": { "MegaBox": { "qty": 2 } }
+    },
+    {
+      "id": "DeveloperBirthday9",
+      "title": "D-9",
+      "desc": "D-9",
+      "start": "2026-05-05",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": 0 },
+      "reward": {
+        "NyangDrop": { "rarity": "Common", "cnt": "One", "qty": 3 }
       }
     },
     {
-      "id": "Update Freebie!!",
-      "title": "무료보상!",
-      "description": "Free coin!",
-      "startdate": "2026-2-10",
-      "finishdate": "2026-2-20",
-      "price": {
-        "Coin": 0,
-        "Reputation": 0,
-        "Crystal": 0
-      },
-      "give": {
-        "Coin": {
-          "quantity": 1000
-        }
+      "id": "DeveloperBirthday9Crystal",
+      "title": "D-9",
+      "desc": "D-9",
+      "start": "2026-05-05",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": 59 },
+      "reward": {
+        "NyangDrop": { "rarity": "Unique", "cnt": "One", "qty": 3 }
       }
     },
     {
-      "id": "Update Freebie!!!",
-      "title": "무료보상!",
-      "description": "Free Crystal!",
-      "startdate": "2026-2-10",
-      "finishdate": "2026-2-20",
-      "price": {
-        "Coin": 0,
-        "Reputation": 0,
-        "Crystal": 0
-      },
-      "give": {
-        "Crystal": {
-          "quantity": 5
-        }
+      "id": "DeveloperBirthday8",
+      "title": "D-8",
+      "desc": "D-8",
+      "start": "2026-05-06",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": 0 },
+      "reward": { "Crystal": { "qty": 5 } }
+    },
+    {
+      "id": "DeveloperBirthday8Crystal",
+      "title": "D-8",
+      "desc": "D-8",
+      "start": "2026-05-06",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": 12 },
+      "reward": { "Crystal": { "qty": 13 } }
+    },
+    {
+      "id": "DeveloperBirthday7",
+      "title": "D-7",
+      "desc": "D-7",
+      "start": "2026-05-07",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": 0 },
+      "reward": { "NyangPassXP": { "qty": 500 } }
+    },
+    {
+      "id": "DeveloperBirthday7Crystal",
+      "title": "D-7",
+      "desc": "D-7",
+      "start": "2026-05-07",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": -10 },
+      "reward": { "NyangPassXP": { "qty": 500 } }
+    },
+    {
+      "id": "DeveloperBirthday6",
+      "title": "D-6",
+      "desc": "D-6",
+      "start": "2026-05-08",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": 0 },
+      "reward": { "Coin": { "qty": 513 } }
+    },
+    {
+      "id": "DeveloperBirthday6Crystal",
+      "title": "D-6",
+      "desc": "D-6",
+      "start": "2026-05-08",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": 19 },
+      "reward": { "Coin": { "qty": 513 } }
+    },
+    {
+      "id": "DeveloperBirthday5",
+      "title": "D-5",
+      "desc": "D-5",
+      "start": "2026-05-09",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": 0 },
+      "reward": {
+        "NyangDrop": { "rarity": "Legendary", "cnt": "One", "qty": 1 }
       }
     },
     {
-      "id": "Update Freebie!!!!",
-      "title": "무료보상!",
-      "description": "Free Affection!",
-      "startdate": "2026-2-10",
-      "finishdate": "2026-2-20",
-      "price": {
-        "Coin": 0,
-        "Reputation": 0,
-        "Crystal": 0
-      },
-      "give": {
-        "Affection": {
-          "quantity": 0.03
-        }
+      "id": "DeveloperBirthday5Crystal",
+      "title": "D-5",
+      "desc": "D-5",
+      "start": "2026-05-09",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": 39 },
+      "reward": {
+        "NyangDrop": { "rarity": "Common", "cnt": "One", "qty": 5 }
+      }
+    },
+    {
+      "id": "DeveloperBirthday4",
+      "title": "D-4",
+      "desc": "D-4",
+      "start": "2026-05-10",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": 0 },
+      "reward": { "MegaBox": { "qty": 2 } }
+    },
+    {
+      "id": "DeveloperBirthday4Crystal",
+      "title": "D-4",
+      "desc": "D-4",
+      "start": "2026-05-10",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": 49 },
+      "reward": {
+        "NyangDrop": { "rarity": "Mythic", "cnt": "One", "qty": 1 }
+      }
+    },
+    {
+      "id": "DeveloperBirthday3",
+      "title": "D-3",
+      "desc": "D-3",
+      "start": "2026-05-11",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": 0 },
+      "reward": { "NyangPassXP": { "qty": 1500 } }
+    },
+    {
+      "id": "DeveloperBirthday3Crystal",
+      "title": "D-3",
+      "desc": "D-3",
+      "start": "2026-05-11",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": 99 },
+      "reward": { "NyangPassXP": { "qty": 5000 } }
+    },
+    {
+      "id": "DeveloperBirthday2",
+      "title": "D-2",
+      "desc": "D-2",
+      "start": "2026-05-12",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": 0 },
+      "reward": { "MegaBox": { "qty": 3 } }
+    },
+    {
+      "id": "DeveloperBirthday2Crystal",
+      "title": "D-2",
+      "desc": "D-2",
+      "start": "2026-05-12",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": -5 },
+      "reward": { "Crystal": { "qty": 3 } }
+    },
+    {
+      "id": "DeveloperBirthday1",
+      "title": "D-1",
+      "desc": "D-1",
+      "start": "2026-05-13",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": 0 },
+      "reward": {
+        "NyangDrop": { "rarity": "Ultra", "cnt": "One", "qty": 1 }
+      }
+    },
+    {
+      "id": "DeveloperBirthday1Crystal",
+      "title": "D-1",
+      "desc": "D-1",
+      "start": "2026-05-13",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": 199 },
+      "reward": {
+        "NyangDrop": { "rarity": "Ultra", "cnt": "Two", "qty": 1 }
+      }
+    },
+    {
+      "id": "DeveloperBirthday",
+      "title": "HappyBirthday",
+      "desc": "Developer's birthday. Celebrate and claim offers",
+      "start": "2026-05-14",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": 0 },
+      "reward": {
+        "NyangDrop": { "rarity": "Ultra", "cnt": "One", "qty": 1 },
+        "MegaBox": { "qty": 2 },
+        "Coin": { "qty": 513 },
+        "Crystal": { "qty": 13 }
+      }
+    },
+    {
+      "id": "DeveloperBirthdayCrystal",
+      "title": "HappyBirthday",
+      "desc": "Developer's birthday. Celebrate and claim offers",
+      "start": "2026-05-14",
+      "end": "2026-05-15",
+      "cost": { "Coin": 0, "Reputation": 0, "Crystal": -1 },
+      "reward": {
+        "NyangPassXP": { "qty": 1000 },
+        "Crystal": { "qty": 13 },
+        "MegaBox": { "qty": 2 },
+        "Coin": { "qty": 513 }
       }
     }
   ]
